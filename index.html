@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isekai Online — Web Edition</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="wrap">
+    <div id="gamearea">
+      <canvas id="scene-canvas"></canvas>
+      <div id="chat-log">
+        <span id="cl1"></span><br>
+        <span id="cl2"></span>
+      </div>
+    </div>
+    <div id="hud">
+      <div id="hud-top">
+        <canvas id="portrait" width="52" height="52" title="Click to switch class"></canvas>
+        <div id="bars-block">
+          <div class="bar-wrap"><div class="bar-lbl hp-lbl">HP</div><div class="bar-outer"><div class="bar-inner" id="hp-bar" style="width:100%"></div><span class="bar-txt" id="hp-txt">500/500</span></div></div>
+          <div class="bar-wrap"><div class="bar-lbl mp-lbl">MP</div><div class="bar-outer"><div class="bar-inner" id="mp-bar" style="width:100%"></div><span class="bar-txt" id="mp-txt">200/200</span></div></div>
+          <div class="bar-wrap"><div class="bar-lbl xp-lbl">XP</div><div class="bar-outer"><div class="bar-inner" id="xp-bar" style="width:5%"></div><span class="bar-txt" id="xp-txt">5/100</span></div></div>
+        </div>
+        <div id="plr-info">Lv.<span id="plv">5</span> <span id="cls-lbl">Warrior</span><br>Gold: <span id="gold">350</span><br>Rank: <span id="rank">3</span></div>
+      </div>
+      <div id="skillbar">
+        <div class="sk" id="sk0"><div class="sk-key">1</div><canvas class="sk-icon" id="si0" width="62" height="42"></canvas><div class="sk-name" id="sn0">Auto</div></div>
+        <div class="sk" id="sk1"><div class="sk-key">2</div><canvas class="sk-icon" id="si1" width="62" height="42"></canvas><div class="sk-name" id="sn1">Skill 2</div></div>
+        <div class="sk" id="sk2"><div class="sk-key">3</div><canvas class="sk-icon" id="si2" width="62" height="42"></canvas><div class="sk-name" id="sn2">Skill 3</div></div>
+        <div class="sk" id="sk3"><div class="sk-key">4</div><canvas class="sk-icon" id="si3" width="62" height="42"></canvas><div class="sk-name" id="sn3">Skill 4</div></div>
+        <div class="sk" id="sk4"><div class="sk-key">5</div><canvas class="sk-icon" id="si4" width="62" height="42"></canvas><div class="sk-name" id="sn4">Skill 5</div></div>
+      </div>
+      <div id="bottom-bar">
+        <div id="quest-panel">
+          <div id="quest-title">Main Quest</div>
+          <div id="quest-prog">Defeat Shadow Wisps: 0/5</div>
+        </div>
+        <div id="chat-wrap">
+          <input id="chat-in" placeholder="Press Enter to chat..." maxlength="50" />
+          <button id="chat-btn">Say</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/classes.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/draw.js"></script>
+  <script src="js/combat.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
