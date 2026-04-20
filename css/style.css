@@ -1,0 +1,37 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Georgia, serif; }
+body { background: #0d0520; display: flex; justify-content: center; min-height: 100vh; }
+#wrap { width: 100%; max-width: 900px; background: #1a0a2e; overflow: hidden; }
+#gamearea { position: relative; width: 100%; height: 340px; overflow: hidden; }
+#scene-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+#chat-log { position: absolute; bottom: 8px; left: 10px; font-size: 10px; font-family: Arial, sans-serif; color: #aaa; pointer-events: none; line-height: 1.6; }
+#hud { background: #0d0614; border-top: 3px solid #6a0dad; padding: 6px 8px 8px; }
+#hud-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+#portrait { width: 52px; height: 52px; border: 2px solid #c89b3c; border-radius: 4px; flex-shrink: 0; background: #1a0a2e; cursor: pointer; }
+#portrait:hover { border-color: #fff; }
+#bars-block { flex: 1; }
+.bar-wrap { display: flex; align-items: center; gap: 5px; margin-bottom: 3px; }
+.bar-lbl { font-size: 10px; font-weight: 700; width: 22px; font-family: Arial, sans-serif; letter-spacing: 1px; }
+.hp-lbl { color: #e74c3c; } .mp-lbl { color: #3498db; } .xp-lbl { color: #d4ac0d; }
+.bar-outer { flex: 1; height: 14px; background: #111; border: 1px solid #333; border-radius: 2px; overflow: hidden; position: relative; }
+.bar-inner { height: 100%; border-radius: 2px; transition: width 0.3s; }
+#hp-bar { background: #c0392b; } #mp-bar { background: #1a6bbf; } #xp-bar { background: #d4ac0d; }
+.bar-txt { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 9px; color: #fff; font-weight: 700; font-family: Arial, sans-serif; }
+#plr-info { text-align: right; font-size: 11px; color: #c89b3c; font-family: Arial, sans-serif; line-height: 1.6; flex-shrink: 0; }
+#plr-info span { color: #fff; }
+#skillbar { display: flex; gap: 5px; justify-content: center; margin-bottom: 6px; }
+.sk { width: 62px; height: 62px; background: #0d0614; border: 2px solid #6a0dad; border-radius: 6px; cursor: pointer; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: border-color .15s, transform .1s; overflow: hidden; user-select: none; }
+.sk:hover { border-color: #c89b3c; transform: scale(1.06); }
+.sk.cd { border-color: #333; filter: brightness(0.5); cursor: not-allowed; }
+.sk-icon { width: 100%; height: 42px; display: block; }
+.sk-name { font-size: 8px; color: #c89b3c; font-family: Arial, sans-serif; text-align: center; letter-spacing: .5px; font-weight: 700; }
+.sk-key { position: absolute; top: 2px; left: 4px; font-size: 9px; color: #888; font-family: Arial, sans-serif; }
+.sk-cd { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,.75); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; color: #fff; font-family: Arial, sans-serif; border-radius: 4px; }
+#bottom-bar { display: flex; gap: 8px; align-items: center; }
+#quest-panel { flex: 1; background: #120820; border: 1px solid #6a0dad; border-radius: 4px; padding: 4px 8px; font-family: Arial, sans-serif; }
+#quest-title { font-size: 10px; color: #c89b3c; font-weight: 700; letter-spacing: .5px; }
+#quest-prog  { font-size: 10px; color: #aaa; }
+#chat-wrap { flex: 1.5; display: flex; gap: 4px; }
+#chat-in { flex: 1; background: #120820; border: 1px solid #6a0dad; color: #fff; font-size: 11px; padding: 4px 7px; border-radius: 3px; font-family: Arial, sans-serif; outline: none; }
+#chat-in:focus { border-color: #c89b3c; }
+#chat-btn { background: #6a0dad; border: none; color: #fff; font-size: 11px; padding: 4px 10px; border-radius: 3px; cursor: pointer; font-family: Arial, sans-serif; font-weight: 700; }
+#chat-btn:hover { background: #8a2be2; }
